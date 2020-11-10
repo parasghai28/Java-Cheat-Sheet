@@ -1,2 +1,2 @@
 # Java-Cheat-Sheet
-Java Topics with codes I wrote to understand them
+Use this to revise Java Concepts with their practical codes 
