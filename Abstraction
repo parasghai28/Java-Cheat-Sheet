@@ -1,0 +1,50 @@
+Data Abstraction is the property by virtue of which only the essential details are displayed to the user.The trivial or the non-essentials units are not displayed to the user. Ex: A car is viewed as a car rather than its individual components. In java, abstraction is achieved by interfaces and abstract classes. We can achieve 100% abstraction using interfaces.
+
+Abstract method - Declared and not defined. A method defined abstract must always be redefined in the subclass,thus making overriding compulsory OR either make subclass itself abstract.
+Abstract class- Class which has abstract methods.Any class that contains one or more abstract methods must also be declared with abstract keyword. Main advantage is you cannot create objects of abstract class. An abstract class may or may not have all abstract methods. Some of them can be concrete methods
+Concrete class- Class which has full implementation of methods(abstract and non abstract both)
+
+public class Application {
+	public static void main(String[] args) {
+		Iphone i1 = new Iphone();
+		Samsung s1 = new Samsung();
+		showCall(i1); //calling from Iphone object
+		showCall(s1); //calling from Samsung object
+		}
+	
+	public static void showCall(Phone obj) {
+		//It will call Method call() on basis of type of obj
+    obj.call();
+	}
+}
+
+public class Iphone extends Phone {
+
+	@Override
+	public void call() {
+		System.out.println("Calling from Iphone");
+	}
+}
+
+public class Samsung extends Phone {
+
+	@Override
+	public void call() {
+		System.out.println("Calling from Samsung");
+	}
+}
+
+public abstract class Phone {
+	abstract public void call();
+	public void camera() {
+		System.out.println("Camera working");
+	}
+}
+
+
+Advantages of Abstraction- 
+It reduces the complexity of viewing the things.
+Avoids code duplication and increases reusability.
+Helps to increase security of an application or program as only important details are provided to the user.
+
+
