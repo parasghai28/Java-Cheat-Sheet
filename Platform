@@ -1,17 +1,12 @@
 
 Java Platform	Independence
 __________________________
-Once	we	compile	a	java program	and	build	a	jar, we	can	run	the	jar	(compiled	
-java	program) in	any	Operating	System- where	a	JVM	is	installed.
-On	compiling	a	java	file	the	output	is	a	class	file	
-- which	contains an internal java representation	called	bytecode.	Java	bytecode is	the	instruction	set	of	the	Java virtual	machine.
-Each bytecode is	composed	of one or two	bytes	that	represent	the	instruction	(opcode),	along	with	zero	or	more	bytes	for	passing	
-parameters. 
-JVM	converts bytecode to executable.
-instructions.	 The executable	 instructions	 are different in	 different operating systems.	 So, there are	
-different	 JVM's	 for	 different	 operating	 systems.	A	JVM for windows is	 different from	 a JVM for mac.	
-However,	both the JVM's	understand the	bytecode which is the real beauty here and	convert	 it	 to	 the executable	 code	 for the	
-respective	operating	system.
+
+Once we compile a java programa and buld a jar, we can run the jar in any OS- where JVM is installed. On compiling a java fiel the output is a class file
+which contains an internl representation called bytecode. Bytecode is the instruction set of JVM. JVM converts the bytecode to executable instructions.
+However executable instrcutions are different for every OS. So JVM is diffrent for every OS.
+
+
 
 Jar vs War vs Ear
 _________________
