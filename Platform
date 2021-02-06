@@ -1,0 +1,29 @@
+
+Java Platform	Independence
+__________________________
+Once	we	compile	a	java program	and	build	a	jar, we	can	run	the	jar	(compiled	
+java	program) in	any	Operating	System- where	a	JVM	is	installed.
+On	compiling	a	java	file	the	output	is	a	class	file	
+- which	contains an internal java representation	called	bytecode.	Java	bytecode is	the	instruction	set	of	the	Java virtual	machine.
+Each bytecode is	composed	of one or two	bytes	that	represent	the	instruction	(opcode),	along	with	zero	or	more	bytes	for	passing	
+parameters. 
+JVM	converts bytecode to executable.
+instructions.	 The executable	 instructions	 are different in	 different operating systems.	 So, there are	
+different	 JVM's	 for	 different	 operating	 systems.	A	JVM for windows is	 different from	 a JVM for mac.	
+However,	both the JVM's	understand the	bytecode which is the real beauty here and	convert	 it	 to	 the executable	 code	 for the	
+respective	operating	system.
+
+Jar vs War vs Ear
+_________________
+Jar - Java archive. JAR is a group of .class files
+War - Web archive. WAR contains all the project files of the web application. Making a war of project helps in easy delivery,deployment of project.
+Ear - Enterprise archive. Ear contains project files of enterprise application.
+
+
+JDK vs JRE vs JVM
+_________________
+JDK - provides env for development and running of java programs. (Developer env). JDk + developement tools = JDK
+JRE- Minimum req for running java programs. (Client env). JVM + library clasess = JRE 
+JVM- interpreter which runs the java programs line by line
+
+
