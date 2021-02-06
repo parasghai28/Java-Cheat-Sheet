@@ -1,10 +1,19 @@
 
+Java is a hybrid language which uses both compiler and interpreter.
+In C/C++ - we complie the source code, get and executable file and 
+In Java- we use compiler to compile  the source code and get a bytecode, and then bytecode is interpreted using JVM(Interpreter)
+
+
 Java Platform	Independence
 __________________________
 
+Java was introduced to solve distribited systems problem. A distributed system is where multiple programs are run on diff machines and they serve as single unit of
+one big program.
 Once we compile a java programa and buld a jar, we can run the jar in any OS- where JVM is installed. On compiling a java fiel the output is a class file
-which contains an internl representation called bytecode. Bytecode is the instruction set of JVM. JVM converts the bytecode to executable instructions.
-However executable instrcutions are different for every OS. So JVM is diffrent for every OS.
+which contains an internl representation called bytecode. Bytecode is the instruction set of JVM and contains the .class files. Once we get bytecode we can run
+it on any platform. Since executable instrcutions are different for every OS thats why we have diff JVM for every OS.
+
+In C/C++ when compiler compiles the source code and gives us executable, it is specific to that platform only and cannot be run on other platforms
 
 
 
@@ -19,6 +28,19 @@ JDK vs JRE vs JVM
 _________________
 JDK - provides env for development and running of java programs. (Developer env). JDk + developement tools = JDK
 JRE- Minimum req for running java programs. (Client env). JVM + library clasess = JRE 
-JVM- interpreter which runs the java programs line by line
+JVM- Interpreter which runs the java programs line by line
+
+Java vs C++
+___________
+
+Java platform independent. C++ is not.
+C++ has pointers. Java no
+In C++, dev has to take care of memory deallocation. No need for that in Java as it used garbage collection.
+In C++, multiple inheritance is allowed. Java no.
+Java and C++ both are not 100% OOP
+
+
+Classloader
+__________
 
 
