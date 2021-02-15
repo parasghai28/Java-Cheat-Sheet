@@ -1,0 +1,59 @@
+String are immutable. Value	of	a	String	Object	once	created	cannot	be	modified.	Any	modification	on	a	String	object	creates	a	
+new	String	object.
+
+String	str3	=	"value1";
+str3.concat("value2");
+System.out.println(str3);	//value1
+Note	that	the	value	of	str3	is	not	modified	in	the	above	example.		The	result	should	be	assigned	to	a	new	
+reference	variable	(or	same	variable	can	be	reused). All	wrapper	class	instances	are	immutable	too!
+String	concat	=	str3.concat("value2");
+System.out.println(concat);	//value1value2
+
+
+Where are Strings stored
+_______________________
+It depends upon the way it is created
+1. String	str1 =	"value";	
+This	value	will	be	stored	in	a	"String	constant	pool"	– which	is	inside	the	Heap	memory.	If	compiler	finds	
+a	String	literal,it	checks	if	it	exists	in	the	pool.	If	it	exists,	it	is	reused.
+String	str5 =	"value";	
+In	above	example,	when	str5	is	created	- the	existing	value	from	String	Constant	Pool	is	reused.
+
+
+2.However,	if	new	operator	is	used	to	create	string	object,	the	new	object	is	created	on	the	heap. There	
+will	not	be	any	reuse	of	values.
+//String	Object	- created	on	the	heap
+String	str2 =	new String("value");
+
+
+Careful about concat operations
+_______________________________
+
+String s3 = "Value1";
+String s2 = "Value2";
+for (int i = 0; i < 100000; ++i) {
+s3 = s3 + s2;
+} //More than 1000000 objects are created by this and it can hinder performace and it took 25 seconds in my machine
+
+The	easiest	way	to	solve	above	problem	is	using	StringBuffer
+
+StringBuffer s3 = new StringBuffer("Value1");
+String s2 = "Value2";
+for (int i = 0; i < 100000; ++i) {
+s3.append(s2);
+}
+
+By using stringbuffer for this problem it takes 0.5 seconds
+
+
+String vs Stringbuffer
+_______________________
+
+• Objects	of	type	String	are	immutable.	StringBuffer	is	used	to	represent	values	that	can	be	
+modified.
+• In	situations	where	values	are	modified	a	number	to	times,	StringBuffer	yields	significant	
+performance	benefits.
+• Both	String	and	StringBuffer	are	thread-safe.
+• StringBuffer	is	implemented	by	using	synchronized	keyword	on	all	methods
+
+StringBuilder	is	not	thread	safe.	So,	it	performs	better	in	situations	where	thread	safety	is	not	required.
