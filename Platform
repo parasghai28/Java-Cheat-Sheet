@@ -43,4 +43,13 @@ Java and C++ both are not 100% OOP
 Classloader
 __________
 
+Role of classloader- A java program is made up of a number of custom classes and core classes. When a program is executed, JVM needs to load contents of all needed
+classes. JVM uses a classloader to find the classes.
+
+Every classloader subsystem consists of 3 types of classloaders.
+1.Bootstrap classloader- to load core java API classes like stringbuffer from 'bootstrap class path' (/jdk/jre/lib/rt.jar). Provided by Java env. 
+2.Extension classloader- to load classess from extension classpath(/jdk/jre/lib/ext/.jar files). (Extension dirextories)- jre,ext,lib
+3.Application/System classloader- to load classes from application claspath. classpath - jar,war,ear
+
+
 
