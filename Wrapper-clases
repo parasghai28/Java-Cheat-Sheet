@@ -1,0 +1,96 @@
+Wrapper classes
+_______________
+
+It is provided in the java.lang package to provide object methods for 8 primitive types. All the primitive classess in java are immutable
+Wrapper: Boolean,Byte,Character,Double,Float,Integer,Long,Short
+Primitive: boolean,byte,char ,double, float, int, long,short
+
+
+Need for wrapper classes
+_______________________
+A wrapper class wraps (encloses) around a data type and gives it an object appearance.
+Reasons why we need Wrapper Classes
+• we can assigna a null value to it which is not possible in primitive types.
+• use it in a Collection
+• Methods that support Object like creation from other types.. like String "55" can be converted to integer like this
+    Integer	number2 =	new Integer("55");
+    
+    
+How to create wrapper class instance
+___________________________________
+1.Using a wrapper class constrcutor
+  Integer	number =	new Integer(55);//int
+  Integer	number2 =	new Integer("55");//String
+
+  Float	number4 =	new Float(55.0f);//float	argument
+  Float	number5 =	new Float("55.0f");//String
+
+  //"true"	"True"	"tRUe"	- all	String	Values	give	True
+  //Anything	else	gives	false
+  Boolean	b1 =	new Boolean("true");//value	stored	- true
+  Boolean	b2 =	new Boolean("True");//value	stored	- true
+  Boolean	b3 =	new Boolean("False");//value	stored	- false
+  Boolean	b4 =	new Boolean("SomeString");//value	stored	- false
+
+2. Using valueOf static methods
+  Integer	hundred =	Integer.valueOf("100");//100	is	stored	in	variable
+  
+  
+ The difference b/w valueOf method and constrcutor to create wrapper class instance	is	that using	the	Constructor 
+ you	will	always	create	a	new	object,	while	using	valueOf()
+static	method,	it may	return	you	a	cached	value	with-in	a	range.	
+For	example	:	The	cached	values	for long are	between [-128	to	127].
+We should prefer	static	valueOf	method,	because	it	may	save	you	some	memory.
+
+
+Autoboxing
+__________
+
+Autoboxing	is	the	automatic	conversion	that	the	Java	compiler	makes	between	the	primitive	types	and	
+their	corresponding	object	wrapper	classes.	For	example,	converting	an	int	to	an	Integer, a	double	to	a	
+Double,	and	so	on.	If	the	conversion	goes	the	other	way,	this	is	called	unboxing
+
+Integer nine = 9;
+
+
+Auto	Boxing	helps	in	saving	memory	by	reusing	already	created	Wrapper	objects.	Auto	Boxing	uses	the	
+static	valueOf	methods.	However	wrapper	classes	created	using	new	are	not	reused.
+Two	wrapper	objects	created	using	new	are	not	same	object.
+
+Integer	nineA	=	new Integer(9);
+Integer	nineB	=	new Integer(9);
+System.out.println(nineA	==	nineB);//false
+System.out.println(nineA.equals(nineB));//true
+
+Two	wrapper	objects	created	using	boxing	are	same	object.
+Integer	nineC	=	9;
+Integer	nineD	=	9;
+System.out.println(nineC	==	nineD);//true
+System.out.println(nineC.equals(nineD));//true
+
+
+Casting
+________
+
+Casting is used when we want to convert on data type to another.
+There are two types of Casting
+• Implicit Casting
+• Explicit Casting
+
+
+Implicit Casting is done by the compiler. Good examples of implicit casting are all the automatic widening
+conversions i.e. storing smaller values in larger variable types.
+int value	=	100;
+long number =	value;	//Implicit	Casting
+float f =	100;	//Implicit	Casting	
+
+Explicit Casting is done through code. Good examples of explicit casting are the narrowing conversions.
+Storing larger values into smaller variable types;
+long number1	=	25678;
+int number2 =	(int)number1;//Explicit	Casting
+//int x	=	35.35;//COMPILER	ERROR
+int x =	(int)35.35;//Explicit	Casting
+Explicit casting would cause truncation of value if the value stored is greater than the size of the variable.
+int bigValue	=	280;
+byte small	=	(byte)	bigValue;
+System.out.println(small);//output	24.	Only	8	bits	remain.
