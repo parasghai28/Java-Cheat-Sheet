@@ -1,7 +1,35 @@
-Data Abstraction is the property by virtue of which only the essential details are displayed to the user.The trivial or the non-essentials units are not displayed to the user. Ex: A car is viewed as a car rather than its individual components. In java, abstraction is achieved by interfaces and abstract classes. We can achieve 100% abstraction using interfaces.
+Class level modifiers-
+For top level classes these modifiers are allowed-
+public- You can access this class from anywhere(inside package or outside package)
+default- You can access this class Inside package(when you dont declare any modifier)
+Abstarct - if class is abstract, object of this class can not be created
+Final- If class is final, child class object is not possible
 
-Abstract method - Declared and not defined. A method defined abstract must always be redefined in the subclass,thus making overriding compulsory OR either make subclass itself abstract.
-Abstract class- Class which has abstract methods.Any class that contains one or more abstract methods must also be declared with abstract keyword. Main advantage is you cannot create objects of abstract class. An abstract class may or may not have all abstract methods. Some of them can be concrete methods
+
+For inner classes-
+private-
+protected-
+static-
+
+
+Abstract keyword
+________________
+
+Abstract means partial
+
+
+
+Data Abstraction is the property by virtue of which only the essential
+details are displayed to the user.The trivial or the non-essentials units are not displayed to the user.
+Ex: A car is viewed as a car rather than its individual components. 
+In java, abstraction is achieved by interfaces and abstract classes. We can achieve 100% abstraction using interfaces.
+
+Abstract method - Declared and not defined. A method defined abstract must always be redefined in the subclass,thus making overriding
+compulsory OR either make subclass itself abstract. This is the main advantage of abstract
+Abstract class- Any class that contains one or more abstract methods must also be declared with abstract keyword.
+Main advantage is you cannot create objects of abstract class. An abstract class may or may not have all abstract methods. An abstract class necessarily does not
+need to have abstract methods. We can give dummy implementation of class and still make it as abstract.
+Some of them can be concrete methods
 Concrete class- Class which has full implementation of methods(abstract and non abstract both)
 
 public class Application {
