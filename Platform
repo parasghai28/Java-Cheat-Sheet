@@ -52,4 +52,47 @@ Every classloader subsystem consists of 3 types of classloaders.
 3.Application/System classloader- to load classes from application claspath. classpath - jar,war,ear
 
 
+File Structure
+______________
+
+1. Every java program can have any number of classes and the program name can be anything(given there is no public class). A java program can have atmost one
+class and if it does contain one public class, java program should be named after that public class only
+
+2. Java program can have multiple classes and each class can have its own main method. For exa a java program named test.java-
+
+Class A { p s v main() {syso("A");} }
+Class B { p s v main() {syso("B");} }
+Class C { p s v main() {syso("C");} }
+Class D { } 
+
+When we  will compile this 4 .class files will be created because 4 classes are present. And if we run .A class main method for Class A will be called
+But what about class D ? when we will run .D class file it will give error that main() not present.
+And what if we run test.java, it will give error as well saying main not found
+
+
+Import Statements
+_________________
+
+How to import a class inside our class-
+1. java.util.ArrayList list = new java.util.ArrayList()
+2. Or just import java.util.ArrayList(length of code is reduced and code become readable)
+
+Types of Import- 
+1. Explicit import- import java.util.ArrayList ()
+2. Implicit import- import java.util.*
+
+Implict import is almost always discouraged in real time no matter what to improve readability. 
+
+
+By default some packages are available in java program
+1. Java.lang - like string
+2. Default-  If we Use classes present in current working directory(same location on system), we need not import it
+
+
+Package
+_______
+1. In java program first non comment statement should be package name and then second import statement and then third class, enum, interface(Order is important)
+2. Atmost one package is allowed in java program
+
+
 
