@@ -105,5 +105,13 @@ Helps to increase security of an application or program as only important detail
 Interface
 _________
 
+In Java 7 and all earlier versions, interfaces were very simple. They could only contain public abstract methods.
+These interface methods MUST be implemented by classes which choose to implement the interface.
+
+From Java 8, apart from public abstract methods, you can have public static methods and public default methods.
+
+
+While implementing the interface in class, make sure to implement all the methods present in that interface in your class
+
 
 
