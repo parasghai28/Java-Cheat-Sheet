@@ -1,0 +1,17 @@
+Encapsulation
+____________
+
+the process of encapsulating or grouping data members and corressponding methods is c/d encapsulation
+
+If any component follows data hiding and abstraction it is said to be encapsulated
+
+Advantages-
+1. Increases Security
+2. Increases Modularity
+3. Enhancement becomes easier
+
+
+Tightly Encapsulated class
+__________________________
+
+When class contains all private variables
