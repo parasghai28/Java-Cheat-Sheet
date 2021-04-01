@@ -1,0 +1,13 @@
+How to achieve data hiding ?
+
+By making variables as private
+
+
+Class Account {
+  private double balance;
+  public double getBalance() {
+    //some validation and then return balance  
+    // this adds security to program and also hides private details from user 
+  }
+  
+}
