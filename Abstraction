@@ -1,23 +1,49 @@
 Class level modifiers-
 For top level classes these modifiers are allowed-
 public- You can access this class from anywhere(inside package or outside package)
-default- You can access this class Inside package(when you dont declare any modifier)
+default- You can access this class Inside package(Default is when you dont declare any modifier)
 Abstarct - if class is abstract, object of this class can not be created
 Final- If class is final, child class object is not possible
 
 
 For inner classes-
-private-
-protected-
+private- accessible only in same class
+protected- 1.accessible in same package anywhere and 2.outside package in child classes(Imp- but only with child class reference)
+
+package a;
+public class Parent { 
+protected d() {syso("d"); } 
+}
+
+package b;
+public class Child extends Parent {
+ main() {
+ 	Parent p = new Parent();
+	p.d(); //wrong
+	Child c = new Child();
+	c.d(); //correct
+	Parent p = new Child();
+	p.d(); //wrong
+  }
+  //Should have child reference only
+}
+
+
+Private< Default< protected< Public In order of most accessible
+
 static-
+
+Member Modifiers
+_______________
+
+public- It can be accesible anywhere but point to be noted here is - that public member should also be inside a public class, if it is not in a public class
+then it wont be accessible
 
 
 Abstract keyword
 ________________
 
 Abstract means partial
-
-
 
 Data Abstraction is the property by virtue of which only the essential
 details are displayed to the user.The trivial or the non-essentials units are not displayed to the user.
