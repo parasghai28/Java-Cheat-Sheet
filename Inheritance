@@ -1,0 +1,40 @@
+Inheritance
+___________ 
+
+1. is- a relationship
+2. code reusability
+3. extends keyword
+
+
+Class Parent {
+  public void m1() { }  
+}
+
+Class Child extends Parent {
+  public void m2() { }
+
+}
+
+Class test{ 
+p.s.v. main() {
+  
+  Parent p = new Parent();
+  p.m1();  //Correct
+  p.m2();  //Wrong, as parent doest have access to child class methods
+  
+  Child c = new Child();
+  c.m1();  //Correct, as it has access to parent class methods
+  c.m2();  // Correct 
+  
+  
+  //Parent reference can be used to hold child class object
+  Parent p = new Child();
+  p.m1();  //Correct, for Parent object parent method is accessible
+  p.m2();  //Incorrect, for Parent object child method is not accessible even though child class was instantiated
+  
+  
+  //Child reference can not be used to hold parent class object
+  Child c = new Parent() // Incorrect
+  
+}
+}
