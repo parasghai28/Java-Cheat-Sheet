@@ -38,3 +38,21 @@ p.s.v. main() {
   
 }
 }
+
+
+Object is the root class in java and child classes like String, Stringbuffer, Number, Boolean, throwable extends from object class. Throwable is another
+important class which is parent class of Exception and Error
+
+
+
+Types of Inheritance
+____________________
+
+Single Inheritance- A->B
+Multiple Inheritnce- not supported in java due to ambiguity problem(same method in both parent classes when inherited will create ambiguity in child class)
+Multi level Inheritance- A->B->C
+Hierarchal inheritance- From 1 parent class we make multiple child classes(Reverse of Multiple Inheritance)
+Hynbrid Inheritance - Group of inheritance(Not supported in java)
+Cyclic Inheritance- Not allowed in java. A->A, A->B & B->A
+
+
