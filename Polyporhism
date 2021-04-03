@@ -1,0 +1,39 @@
+Method Signature- method name followed by argument types(return value is not included in signature)
+
+If Method signature is same, then we will get compile error
+
+Method Overloading- When 2 functions have same method name but diff arguments
+Method Resolution- Which method will be called based on reference type object(taken care by compiler) Thats why it is also known as Compile time polymorphism
+or static polymorphism or early binding
+
+Automatic promotion in method Overloading
+
+class A {
+  m1() { }
+  m1(int i) { }
+  m2(float f) {}
+
+}
+
+Class Test {
+  main() {
+    A obj = new A();
+    obj.m1(5) // correct
+    obj.m1() //correct
+    obj.m1(2.3f) //correct
+    obj.m1('a') 
+    
+    // In this case automatic promotion happens for 'a' according to this chart(char will be promoted to int and then method resolution will be done
+    on basis of int)
+    
+    byte -> short
+                 \   
+                    -> int -> long -> float -> Double
+                /
+         char->
+   
+   
+   obj.m1(20.5) //Incorrect as there is no double method and no automatic promotion also possible
+   
+   }
+}
