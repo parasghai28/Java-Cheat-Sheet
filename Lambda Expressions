@@ -1,0 +1,57 @@
+Lambda Expressions
+_________________
+ based on mathematical Lambda expression and is used in vast majority of lamgugages
+Need for lambda expressions introduction in java - to enable fucntiona programming
+
+1.Java itself is not itself a fucntional programming language, it is an OOP's language but we still can use functional programming features in Java
+2. Lambda expression is an anonymous function or a nameless fucntion which does not have any modifier, name and return type
+3. LE makes code consice.
+ 
+ How to convert a method into lambda expression
+ Example- 1
+ public void m() {
+  syso("Hey");
+ }
+
+//remove the modifier, return type, name
+
+() {
+  syso("Hey");
+}
+
+Now add arrow '->' symbol to indicate that it is a lambda fucntion
+() -> {
+  syso("Hey");
+}
+
+
+Example 2
+
+public int sq(int n)  {
+  return n*n;
+}
+
+(int n) -> {return n*n; } // We can remove braces if only one statament is there in function, also in '(int n)' if we remove int as well sometimes compiler
+                          //can guess itself and it depends upon context, we can also remove return statement and the brackets around '(int n)' as it only
+                          // has one argument
+                          
+(n) -> n*n ;
+
+________________
+
+Conclusions
+1. LE can have any number of arguments
+2. For one argument LE paranthesis are optional
+3. method braces are optional if there is only one statement
+
+
+How to call LE? Functional Interfaces
+_________________________________
+When Functional Interfaces are present then only we can use LE
+Some common interfaces - Runnable, Callabale, Comparable, Serializable, Random Access
+
+Out of these - Runnable, Callabale, Comparable contain only one abstract method and Serializable, Random Access contains no abstract method
+Fucntional Interface is the interface which has only one abstract method
+
+
+
