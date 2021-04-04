@@ -51,7 +51,52 @@ When Functional Interfaces are present then only we can use LE
 Some common interfaces - Runnable, Callabale, Comparable, Serializable, Random Access
 
 Out of these - Runnable, Callabale, Comparable contain only one abstract method and Serializable, Random Access contains no abstract method
-Fucntional Interface is the interface which has only one abstract method
+Fucntional Interface is the interface which has only one abstract method.
+
+before java 8, only abstract methods were allowed in interface, but in java 8, static and default methods were introduced in interface but with restriction
+that interface can have only 1 abstract method and no matter how many static or defult methods it may contain.
+
+Annotation to denote an interface is fucntional interface - @FucntionalInterface
+Use of annotation is to denote that interface is an FI and it will allow only 1 abstract method(no more no less)
+In inheritance, if we use an interface A to extend a fucntional interface B, make sure A does't have any abstract method as it will violate the FI proprty
+
+(Also, Before java 8, Interface were supposed to be all public and abstract but that is not the case anymore in java 8 (Read more))
 
 
+How to use FI with LE and how it reduces code ?
+Old way---------
 
+Interface Inter {
+ public void m1();
+}
+Class A impelments inter {
+ public void m1{ syso("Some text");
+ }
+}
+
+class Test {
+  p.s.v main() {
+  A obj = new A(); // Note - Interface reference can be used to hold impelmented class object like  Inter i = new A();
+  A.m1();
+}
+}
+
+
+New way with LE and FI------
+Interface Inter {
+ public void m1();
+}
+
+class Test {
+  p.s.v main() {
+  Inter i = () -> syso("Some text");  // here, ()- will infer to the only abstract method present in FI and provide method resolution with the implementation 
+                                      // we provided - () -> syso("Some text");
+ 
+ i.m1();                    // This actually calls the method, In the statement above we just provided the impelmentation
+  
+}
+}
+
+
+This way we use FI to use LE( Remember to use only one abstract method, because if we take more than abstract method, then compiler may have problem 
+doing method resolution given we use something like this () -> syso("Some text"); and we might have ambiguous signature )
