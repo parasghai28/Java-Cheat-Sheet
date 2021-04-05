@@ -1,0 +1,65 @@
+It is representatio of a group of String objects according to a particular pattern.
+Mostly used in validation and in compilers
+
+How to ?
+________
+
+For exa- if we need to find "ab" in "ababaabab"
+First we will have to create a pattern object for "ab"
+Then create a matcher object to match the given pattern in target string
+
+Pattern pt = Pattern.compile("ab") //Compile method is a static method and also return the same class object by which it is called, such function are called
+                                   // factory static methods
+                                   
+Matcher m = pt.matcher("ababaabab")          // Matcher is a class while matcher is a method present in pattern class(Being called by pt)
+
+                                    // both these classes are present in java.util.regex.*    
+while(m.find()) {
+  syso(m.start());
+}
+
+Character Classes
+_________________
+
+[abc] - either a or b or c
+[^abc] - anything except a, b and c
+[a-z] - any lower case letter
+[A-Z] - Any upper case letter
+[a-zA-Z] - Any upper/lower alphabet
+[0-9]- any digit
+[a-zA-Z0-9] - any alpha numeric character
+[^a-zA-Z0-9] - anything except alpha numeric character
+
+Predefined character classes
+__________________________
+
+\s - space character
+\S - anything other than space character
+\d - any digit
+\D - anything other than digit
+\w - any word char [a-zA-Z]
+\W - anything other than word character 
+. - Any character
+
+Remember while using this we have to add one more slash as java might consider this as escape chatacter due to single slash and thats why we will use it as
+\\s, \\S
+
+
+Quantifiers
+____________
+
+We can use Quantifiers to specify number of occurences to matche
+a - excatly one a
+a+ - atleast one a
+a* - all a's
+a? - atmost one a
+X{n}	-X occurs n times only
+X{n,} -	X occurs n or more times
+X{y,z} -	X occurs at least y times but less than z times
+
+
+pt.split() can be used to split strings where pt is the pattern object and it contains the pattern to split strings
+
+Examples- 
+A 10 digit mobile number first digit should be 7,8,9
+ans - [7-9][0-9]{9} // {9} is used to indicate 9 times for [0-9]
