@@ -1,0 +1,7 @@
+Java is a type safe language.
+Type safety is achieved by making sure we declare type of the element before compiling like this
+int value = 5; //and not something like this value = 5;
+
+
+We use generics to specify datatype -
+list<Integer> li = new ArrayList<Integer>();
