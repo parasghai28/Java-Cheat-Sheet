@@ -1,5 +1,17 @@
 
-Java is a hybrid language which uses both compiler and interpreter.
+Java is a general purpose, Object oriented, platform independent, concurrent, hybrid language which uses both compiler and interpreter. It also provides 
+automatic garbage collection and memory management
+
+Compiling - source code -> (compiler) -> machine code/byte code/another programminf language  -> (CPU) -> results
+//When we compile the program we turn into something which machine would understand or in some cases
+a separate programming language(ClojureScript to javascript compilers)
+
+Interpreter - source code -> (Interpreter) -> results
+//Interpreter provides platform independence by needing same source code on all windows, mac, linux but having different interpreter. It uses CPU's fetch and execute
+cycle to perform operations. Advantage here is no compilation step. Limitations is - slow due to costly memory access. Also source code is reinterpreted every time
+
+
+
 In C/C++ - we complie the source code, get and executable file and 
 In Java- we use compiler to compile  the source code and get a bytecode, and then bytecode is interpreted using JVM(Interpreter)
 
@@ -14,6 +26,12 @@ which contains an internl representation called bytecode. Bytecode is the instru
 it on any platform. Since executable instrcutions are different for every OS thats why we have diff JVM for every OS.
 
 In C/C++ when compiler compiles the source code and gives us executable, it is specific to that platform only and cannot be run on other platforms
+
+
+Assume we have a source code named hello.java. When it is compiled it is turned into hello.class(bytecode) , now hello.class can be run on any jvm by "java hello"
+which creates an instance of jvm and processes it.
+
+Execution speed - Byte code interpretattion is faster and also proves JIT compilation.
 
 
 
