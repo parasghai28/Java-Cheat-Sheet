@@ -1,0 +1,28 @@
+Java is a Static type language which means type of variable is static. Compiler does this checking and it is called static typed checking. For exa- javascript is
+not a static type checking and a one type of variable can hold another type of value. JS is a dynamically typed langugage.
+Advanatages of static type checking - earlier detectin of errors
+
+Primitive variable and Object reference
+___________________________________
+int id = 100 // primitve variavle
+Stirng s = "paras" //  This is an object reference as String is a class and it points to a string object 
+Student s = new Student() //object reference
+
+
+Defualt values
+____________
+Instance and static variables do get a default value but local variable does't. We can not assignn values to instance and static vars at class level
+
+class Student {
+  int id = 100; // Error
+  int id; // Correct
+  
+  void compute() {
+    int num ; //Incorrect
+    int num = 100; //Correct
+  }
+  
+  main() {
+  }
+ 
+}
