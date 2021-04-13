@@ -1,6 +1,7 @@
 
 Java is a general purpose, Object oriented, platform independent, concurrent, hybrid language which uses both compiler and interpreter. It also provides 
-automatic garbage collection and memory management
+automatic garbage collection and memory management. Java was designed to work in a network environment with hetrogenous devices. 
+
 
 Compiling - source code -> (compiler) -> machine code/byte code/another programminf language  -> (CPU) -> results
 //When we compile the program we turn into something which machine would understand or in some cases
@@ -9,7 +10,8 @@ a separate programming language(ClojureScript to javascript compilers)
 Interpreter - source code -> (Interpreter) -> results
 //Interpreter provides platform independence by needing same source code on all windows, mac, linux but having different interpreter. It uses CPU's fetch and execute
 cycle to perform operations. Advantage here is no compilation step. Limitations is - slow due to costly memory access. Also source code is reinterpreted every time
-
+An interpreter does not generate machine code like a compiler,
+but it maintains a library of pre-compiled machine code and executes the appropriate machine code corresponding to the statement in the source code 
 
 
 In C/C++ - we complie the source code, get and executable file and 
@@ -33,6 +35,10 @@ which creates an instance of jvm and processes it.
 
 Execution speed - Byte code interpretattion is faster and also proves JIT compilation.
 
+Whats JIT compilation 
+_____________________
+JVM idnentifies frequently used bytecode "hotspots" and converts them into machine code for futute uses. It even caches the machine code for faster execution
+and all this is done dynamically . So for assumption , if JVM identifies a function is ran 1000 times, it might use JIT compilation for it.
 
 
 Jar vs War vs Ear
@@ -45,7 +51,7 @@ Ear - Enterprise archive. Ear contains project files of enterprise application.
 JDK vs JRE vs JVM
 _________________
 JDK - provides env for development and running of java programs. (Developer env). JDk + developement tools = JDK
-JRE- Minimum req for running java programs. (Client env). JVM + library clasess = JRE 
+JRE- Minimum req for running java programs. (Client env). JVM + library clasess(Java API's) = JRE 
 JVM- Interpreter which runs the java programs line by line
 
 Java vs C++
