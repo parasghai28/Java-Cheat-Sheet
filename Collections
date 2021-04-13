@@ -3,5 +3,19 @@ ___________________
 
 -Arrays are homogoenous in nature(can only accept one type of values, exception is creating an Object array)
 - No Underlying data structure(have to write code for every search, sort, remove)
-- Fixed in size
+- Fixed in size 
 
+Collections Framework
+____________________
+Collection framework includes interfaces, implementation(like arrayList), Algorithmic classes(Collections)
+
+Some features of collection framework-
+Serializable, clone(), most allow nulls, not synchronized
+
+Legacy implementations and their recommended counterparts-
+Vector -> ArrayList
+Hashtable -> Hashmap
+Stack -> ArrayDeque
+
+
+Collection Interface- its a collection of objetcs, and polymorphically iot provides max generality so it should be used to reference an object
