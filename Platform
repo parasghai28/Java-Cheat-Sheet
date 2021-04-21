@@ -119,4 +119,20 @@ _______
 2. Atmost one package is allowed in java program
 
 
+Constraints with main() and classes
+_________________________________
+we can declare more than one class in a single source file with these constraints,
+
+Each source file should contain only one public class and the name of that public class should be similar to the name of the source file.
+If you are declaring a main method in your source file then main should lie in that public class.
+
+So the reason behind keeping one public class per source file is to actually make the compilation process faster because it enables a more
+efficient lookup of source and compiled files during linking (import statements). The idea is if you know the name of a class, you know where
+it should be found for each classpath entry and no indexing will be required. 
+
+And also as soon as we execute our application, JVM by default looks for the public class (since there are no restrictions and it 
+can be accessible from anywhere), and it also looks for public static void main(String args[]) in that public class. The public class acts 
+as the initial class from where the JVM instance for the Java application (program) is begun. So when we provide more than one public class 
+in a program the compiler itself stops you by throwing an error. This is because later we can’t confuse the JVM as to which class is to be its initial class
+, because only one public class with the public static void main(String args[]) is the initial class for JVM. 
 
